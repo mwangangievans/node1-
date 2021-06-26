@@ -1,0 +1,30 @@
+GET  http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+
+###
+PATCH http://localhost:3000/products/id
+
+###
+GET http://localhost:3000/products/id
+
+###
+DELETE http://localhost:3000/products/id
+
+###
+GET http://localhost:3000/user
+
+###
+GET http://localhost:3000/test?name=imac&price=2399
+
+###
+GET http://localhost:3000/test/34552344
+
+###
+POST http://localhost:3000/test
+Content-Type: application/json
+{
+    "name": "imacPro",
+    "price":4999 
+}
