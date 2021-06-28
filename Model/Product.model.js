@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 
 const ProductSchema = new Schema({
     name:{
-        type: string,
+        type: String,
         required:true
     },
     price:{
-        type: number,
+        type: Number,
         required:true
     }
 })

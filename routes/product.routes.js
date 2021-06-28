@@ -1,30 +1,12 @@
 const express = require('express');
-
 const router = express.Router();
 
-router.get('/',(req,res,next)=>{
+const ProductController = require('../Controllers/Product.Controller');
 
-res.send('loading all images');
-
-});
-
-router.post('/',(req,res,next)=>{
-    res.send('product created successfully');
-})
-
-router.patch('/:id',(req,res,next)=>{
-    res.send('product updated successfully');
-});
-
-router.delete('/:id',(req,res,next)=>{
-res.send('product deleted successfully');
-});
-
-router.get('/:id',(req,res,next) =>{
-    res.send('get a single product');
-
-});
-
-
+router.get('/',ProductController.getAllProducts);
+router.post('/',ProductController.postProduct);
+router.patch('/:id',ProductController.updateProductById);
+router.delete('/:id',ProductController.deleteProductById);
+router.get('/:id',ProductController.getProductById);
 
 module.exports  = router;
